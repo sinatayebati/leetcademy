@@ -27,6 +27,7 @@ export default function LoginComponent() {
             onChange={(event) =>
               setCredentials({ ...credentials, email: event.target.value })
             }
+            type='email'
             className='common-input'
             placeholder='Email or Phone'
           />
@@ -34,6 +35,7 @@ export default function LoginComponent() {
             onChange={(event) =>
               setCredentials({ ...credentials, password: event.target.value })
             }
+            type='password'
             className='common-input'
             placeholder='Password'
           />
@@ -41,7 +43,9 @@ export default function LoginComponent() {
         <button onClick={login} className='login-btn'>
           Sign In
         </button>
+
         <hr className="hr-text" data-content="or"></hr>
+
         <div className="google-btn-container">
           <GoogleButton
             className='google-btn'
@@ -49,6 +53,9 @@ export default function LoginComponent() {
               console.log('Google button clicked')
             }}
           />
+          <p className='go-to-signup'>
+            New to LeetCademy? <span className='join-now'>Join now</span>
+          </p>
         </div>   
       </div>
     </div>
