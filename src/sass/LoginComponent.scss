@@ -6,6 +6,7 @@
   }
   
   .login-wrapper {
+    min-width: 280px;
     max-width: 400px;
     padding: 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -35,6 +36,7 @@
         width: 100%;
         box-sizing: border-box;
         margin: 10px 0px;
+        font-size: 15px;
       }
     }
   
@@ -79,14 +81,18 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .join-now:hover {
+            background-color: #c4e6fb;
+            padding: 4px;
+            border-radius: 50px;
+        }
     }
-    
   }
 
 .LeetCademyLogo {
     width: 200px;
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: 20px;
 }
 

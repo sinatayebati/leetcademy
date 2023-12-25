@@ -3,6 +3,7 @@ import { LoginAPI, RegisterAPI } from '../api/AuthAPI';
 import '../sass/LoginComponent.scss';
 import GoogleButton from 'react-google-button';
 import LeetCademyLogo from '../assets/LeetCademy-logos/LeetCademy-logos_black.png';
+import { toast } from 'react-toastify';
 
 export default function LoginComponent() {
   const [credentials, setCredentials] = useState({});
@@ -10,7 +11,7 @@ export default function LoginComponent() {
   const login = async () => {
     try {
       let res = await LoginAPI(credentials.email, credentials.password);
-      console.log(res?.user);
+      toast.success("Signed in to LeetCademy!")
     } catch (err) {
       console.log(err);
     }
@@ -21,7 +22,7 @@ export default function LoginComponent() {
       <img src={LeetCademyLogo} className='LeetCademyLogo'/>
       <div className='login-wrapper'>
         <h1>Sign in</h1>
-        <p>Stay updated on your professional world</p>
+        <p>Stay updated on your academic world</p>
         <div className='auth-inputs'>
           <input
             onChange={(event) =>
