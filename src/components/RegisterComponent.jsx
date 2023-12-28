@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LoginAPI, RegisterAPI, GoogleSignInAPI } from '../api/AuthAPI';
+import { RegisterAPI, GoogleSignInAPI } from '../api/AuthAPI';
 import '../sass/RegisterComponent.scss';
 import GoogleButton from 'react-google-button';
 import { useNavigate } from 'react-router-dom';
@@ -11,11 +11,11 @@ export default function RegisterComponent() {
   const [credentials, setCredentials] = useState({});
   const login = async () => {
     try {
-      let res = await LoginAPI(credentials.email, credentials.password);
-      toast.success("Signed in to LeetCademy!")
+      let res = await RegisterAPI(credentials.email, credentials.password);
+      toast.success("Account created!")
     } catch (err) {
       console.log(err);
-      toast.error("Please check your credentials")
+      toast.error("Cannot create your account")
     }
   };
   const googleSignIn = () => {

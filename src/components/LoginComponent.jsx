@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LoginAPI, RegisterAPI, GoogleSignInAPI } from '../api/AuthAPI';
+import { LoginAPI, GoogleSignInAPI } from '../api/AuthAPI';
 import '../sass/LoginComponent.scss';
 import GoogleButton from 'react-google-button';
 import { useNavigate } from 'react-router-dom';
