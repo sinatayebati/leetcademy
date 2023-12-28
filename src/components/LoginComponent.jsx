@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { LoginAPI, RegisterAPI, GoogleSignInAPI } from '../api/AuthAPI';
 import '../sass/LoginComponent.scss';
 import GoogleButton from 'react-google-button';
+import { useNavigate } from 'react-router-dom';
 import LeetCademyLogo from '../assets/LeetCademy-logos/LeetCademy-logos_black.png';
 import { toast } from 'react-toastify';
 
 export default function LoginComponent() {
+  let navigate = useNavigate();
   const [credentials, setCredentials] = useState({});
   const login = async () => {
     try {
@@ -57,7 +59,7 @@ export default function LoginComponent() {
             onClick={googleSignIn}
           />
           <p className='go-to-signup'>
-            New to LeetCademy? <span className='join-now'>Join now</span>
+            New to LeetCademy? <span className='join-now' onClick={() => navigate('/register')}>Join now</span>
           </p>
         </div>   
       </div>
