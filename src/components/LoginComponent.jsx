@@ -13,6 +13,7 @@ export default function LoginComponent() {
     try {
       let res = await LoginAPI(credentials.email, credentials.password);
       toast.success("Signed in to LeetCademy!")
+      navigate('/home')
     } catch (err) {
       console.log(err);
       toast.error("Please check your credentials")
@@ -20,7 +21,7 @@ export default function LoginComponent() {
   };
   const googleSignIn = () => {
     let response = GoogleSignInAPI();
-    console.log(response)
+    navigate('/home')
   };
 
   return (

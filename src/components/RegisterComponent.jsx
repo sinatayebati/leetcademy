@@ -13,6 +13,7 @@ export default function RegisterComponent() {
     try {
       let res = await RegisterAPI(credentials.email, credentials.password);
       toast.success("Account created!")
+      navigate('/home')
     } catch (err) {
       console.log(err);
       toast.error("Cannot create your account")
@@ -20,7 +21,7 @@ export default function RegisterComponent() {
   };
   const googleSignIn = () => {
     let response = GoogleSignInAPI();
-    console.log(response)
+    navigate('/home')
   };
 
   return (
