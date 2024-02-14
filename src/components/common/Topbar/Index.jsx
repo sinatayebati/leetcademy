@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+import './Index.scss'
 import LeetCademyLogo from '../../../assets/LeetCademy-logos/LeetCademy-logos_black.png';
 
 export default function Topbar() {
