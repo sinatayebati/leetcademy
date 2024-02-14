@@ -1,3 +1,7 @@
+$linkedinBlue1: #0072b1;
+$linkedinBlue2: #0073b1;
+$linkedinBlue3: #004c75;
+
 .login-container {
     display: flex;
     align-items: center;
@@ -9,7 +13,7 @@
     min-width: 280px;
     max-width: 600px;
     padding: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     text-align: center;
     background-color: rgb(255, 255, 255);
@@ -43,7 +47,8 @@
     }
   
     .login-btn {
-      background-color: #0a66c2;
+
+      background-color: $linkedinBlue1;
       color: #fff;
       font-size: 15px;
       font-weight: bolder;

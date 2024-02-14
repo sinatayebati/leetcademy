@@ -4,11 +4,21 @@
     background-color: rgba(247, 243, 243, 0.87);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .LeetCademyLogo-topbar {
     width: 150px;
     position: absolute;
-    top: -40px;
-    left: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.react-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 0.7;
+    gap: 100px;
+    transition: gap 0.3s ease;
 }
