@@ -9,6 +9,7 @@ import { RiBriefcaseLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineNotification } from "react-icons/ai";
 import { IoMdSearch } from "react-icons/io";
+import { Route, useNavigate } from 'react-router-dom';
 
 const ResponsiveIcon = styled.div`
     display: inline-flex;
@@ -24,6 +25,10 @@ const ResponsiveIcon = styled.div`
 `;
 
 export default function Topbar() {
+  let navigate = useNavigate();
+  const goToRoute = (route) => {
+    navigate(route);
+  }
   return (
     <div className='topbar-main'>
       <img src={LeetCademyLogo} alt="LeetCademyLogo" className="LeetCademyLogo-topbar" />
@@ -33,11 +38,11 @@ export default function Topbar() {
           <span className="icon-label">Search</span>
         </div>
         <div className="icon-container">
-          <RiHome3Line className='react-icon'/>
+          <RiHome3Line className='react-icon' onClick={() => goToRoute("/home")}/>
           <span className="icon-label">Home</span>
         </div>
         <div className="icon-container">
-          <AiOutlineUsergroupAdd className='react-icon'/>
+          <AiOutlineUsergroupAdd className='react-icon' onClick={() => goToRoute("/profile")}/>
           <span className="icon-label">My Network</span>
         </div>
         <div className="icon-container">
@@ -56,16 +61,6 @@ export default function Topbar() {
           <img src={user} alt="user" className="user" />
           <span className="icon-label">Profile</span>
         </div>
-
-        {/*
-        <ResponsiveIcon><IoMdSearch className='react-icon'/></ResponsiveIcon>
-        <ResponsiveIcon><RiHome3Line className='react-icon'/></ResponsiveIcon>
-        <ResponsiveIcon><AiOutlineUsergroupAdd className='react-icon'/></ResponsiveIcon>
-        <ResponsiveIcon><RiBriefcaseLine className='react-icon'/></ResponsiveIcon>
-        <ResponsiveIcon><BiMessageSquareDetail className='react-icon'/></ResponsiveIcon>
-        <ResponsiveIcon><AiOutlineNotification className='react-icon'/></ResponsiveIcon>
-        <img src={user} alt="user" className="user" />
-        */}
     
       </div>
     </div>

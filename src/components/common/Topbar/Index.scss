@@ -22,7 +22,6 @@ body {
     margin-left: 10px;
 }
 
-
 .react-icons {
     display: flex;
     align-items: center;
@@ -51,11 +50,12 @@ body {
     color: #393939;
     cursor: pointer;
     font-size: 25px;
-    font-weight: bold;
+    font-size: bold;
 }
 
 .user {
     width: 25px;
+    cursor: pointer;
 }
 
 .react-icon:hover {
@@ -99,5 +99,13 @@ body {
 
     .topbar-main {
         padding: 0px; // reduce padding
+    }
+
+    .react-icon {
+        font-size: 15px;
+    }
+
+    .user {
+        width: 15px;
     }
 }
