@@ -22,6 +22,7 @@ body {
     margin-left: 10px;
 }
 
+
 .react-icons {
     display: flex;
     align-items: center;
@@ -34,14 +35,33 @@ body {
     //margin-left: 700px;
 }
 
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; // Gap between icon and label
+}
+.icon-label {
+    font-size: 12px; // Adjust font size as needed
+    color: #393939; // Adjust text color as needed
+    text-align: center; // Ensure label is centered under the icon
+}
+
 .react-icon {
-    color: #5e5e5e;
+    color: #393939;
     cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.user {
+    width: 25px;
 }
 
 .react-icon:hover {
     color: black;
 }
+
 
 // Media query for tablets
 @media (max-width: 768px) {
@@ -53,7 +73,15 @@ body {
     }
 
     .react-icons {
-        gap: 40px; // smaller gap between icons on tablet
+        gap:20px; // smaller gap between icons on tablet
+    }
+
+    .react-icon {
+        font-size: 20px;
+    }
+
+    .user {
+        width: 20px;
     }
 }
 
